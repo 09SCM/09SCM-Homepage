@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
   basePath,
   assetPrefix: basePath || undefined,
   trailingSlash: true,
+  turbopack: {
+    root: process.cwd(),
+  },
   images: {
     unoptimized: true,
   },

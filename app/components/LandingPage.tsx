@@ -113,15 +113,6 @@ function MallFeatureVisual() {
   );
 }
 
-function OrderFeatureVisual() {
-  return (
-    <div className="feature-visual order-feature-visual">
-      <div className="admin-demo compact-admin status-admin"><WindowBar title="주문현황" /><div className="status-summary"><span><small>주문접수</small><b>24</b></span><span><small>픽업대기</small><b>8</b></span><span><small>배달중</small><b>3</b></span></div><div className="status-order"><span>RO1027-001</span><b>픽업</b><em>결제완료</em><strong>픽업대기</strong></div><div className="status-order"><span>RO1027-002</span><b>배달</b><em>결제완료</em><strong>배달중</strong></div></div>
-      <div className="phone-demo mini-phone status-phone"><div className="phone-speaker" /><small>주문번호 RO1027-001</small><h4>상품을 준비하고 있어요</h4><span className="status-pill">픽업대기</span><div className="pickup-card"><small>픽업가능일</small><b>10/27~10/28</b></div></div>
-    </div>
-  );
-}
-
 function PaymentFeatureVisual() {
   return (
     <div className="feature-visual payment-feature-visual">

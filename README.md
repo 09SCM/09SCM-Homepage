@@ -12,7 +12,9 @@
 
 ## 현재 배포 주소
 
-https://zero-scm-homepage-mockup.csb62929.chatgpt.site/
+https://09scm.github.io/09SCM-Homepage/
+
+`main` 브랜치에 변경사항이 반영되면 GitHub Actions를 통해 자동 배포됩니다.
 
 ## 로컬 실행
 
@@ -22,3 +24,7 @@ pnpm dev
 ```
 
 Node.js 22.13 이상이 필요합니다.
+
+## 배포
+
+GitHub Pages용 정적 파일은 `.github/workflows/deploy-pages.yml`에서 생성하고 배포합니다.
