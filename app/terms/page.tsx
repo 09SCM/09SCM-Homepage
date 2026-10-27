@@ -57,7 +57,7 @@ export default function TermsPage() {
     <PolicyPage
       eyebrow="TERMS OF SERVICE"
       title="이용약관"
-      description="09SCM 서비스 이용에 적용되는 이용약관을 안내합니다."
+      description="09SCM 솔루션 이용에 적용되는 이용약관을 안내합니다."
       effectiveDate="2026.07.01"
       version="v2"
       content={CONTENT}

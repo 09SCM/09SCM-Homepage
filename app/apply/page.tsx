@@ -228,7 +228,7 @@ export default function ApplicationPage() {
           <section className="form-section agreement-section">
             <div className="form-section-heading">
               <span>04</span>
-              <div><h2>서비스 이용 및 약관 동의</h2><p>필수 약관에 동의해야 신청할 수 있습니다.</p></div>
+              <div><h2>솔루션 이용 및 약관 동의</h2><p>필수 약관에 동의해야 신청할 수 있습니다.</p></div>
             </div>
             <label className="agreement-all"><input type="checkbox" checked={allChecked} onChange={(event) => toggleAll(event.target.checked)} /> 전체 동의</label>
             <div className="agreement-list">

@@ -35,7 +35,7 @@ const FLOW: { icon: IconName; title: string; description: string }[] = [
 const JOURNEY = [
   { step: 'STEP 1', title: '도입신청', description: '간단한 정보와 사업자 정보를 입력해 주세요.' },
   { step: 'STEP 2', title: '신청심사', description: '담당자가 신청 내용을 확인해요.' },
-  { step: 'STEP 3', title: '결제연동', description: '서비스 이용에 필요한 결제 연동 정보를 확인해요.' },
+  { step: 'STEP 3', title: '결제연동', description: '솔루션 이용에 필요한 결제 연동 정보를 확인해요.' },
   { step: 'STEP 4', title: '계정승인', description: '승인이 완료되면 본사 계정과 소매몰이 생성돼요.' },
   { step: 'STEP 5', title: '이용시작', description: '계정 안내를 받은 뒤 09SCM을 시작할 수 있어요.' },
 ];
@@ -75,7 +75,7 @@ function HeroVisual() {
 
 function ServiceMap() {
   return (
-    <div className="service-map" aria-label="본사, 가맹점, 동네 고객의 서비스 이용 구조">
+    <div className="service-map" aria-label="본사, 가맹점, 동네 고객의 솔루션 이용 구조">
       <div className="service-node headquarters"><span className="node-icon"><LineIcon name="building" /></span><div><small>상품을 준비하는</small><strong>본사</strong></div></div>
       <span className="map-arrow"><b>도매상품 공유</b>→</span>
       <div className="service-node store"><span className="node-icon"><LineIcon name="store" /></span><div><small>주문하고 판매하는</small><strong>가맹점</strong></div></div>
@@ -152,7 +152,7 @@ const FEATURES = [
 export default function LandingPage() {
   return (
     <div className="site-shell"><SiteHeader isHome /><main id="top">
-      <section className="hero"><div className="hero-inner hero-layout"><div className="hero-copy"><p className="eyebrow">09SCM 공동구매 운영 솔루션</p><h1>동네에서 함께 사는{' '}<br /><span>즐거움</span></h1><p className="hero-description">본사와 가맹점이 함께 상품을 준비하고{' '}<br />우리 동네 고객과 공동구매를 시작해 보세요.</p><p className="hero-subcopy">상품 등록부터 주문, 결제, 픽업·배달, 매출 확인까지{' '}<br />09SCM에서 한 번에 관리할 수 있어요.</p><div className="hero-actions"><a className="primary-button" href={`${BASE_PATH}/apply/`}>솔루션 도입신청</a><a className="secondary-button" href="#service-intro">서비스 살펴보기</a></div></div><HeroVisual /></div><div className="hero-fee-banner section-inner"><div><span>09SCM 솔루션 이용료</span><strong>0원</strong></div><p><b>이용료 부담 없이 공동구매를 시작하세요.</b>{' '}상품 등록부터 주문·결제·매출 관리까지 필요한 기능을 함께 제공해요.</p><a className="primary-button" href={`${BASE_PATH}/apply/`}>솔루션 도입신청</a></div></section>
+      <section className="hero"><div className="hero-inner hero-layout"><div className="hero-copy"><p className="eyebrow">09SCM 공동구매 운영 솔루션</p><h1>동네에서 함께 사는{' '}<br /><span>즐거움</span></h1><p className="hero-description">본사와 가맹점이 함께 상품을 준비하고{' '}<br />우리 동네 고객과 공동구매를 시작해 보세요.</p><p className="hero-subcopy">상품 등록부터 주문, 결제, 픽업·배달, 매출 확인까지{' '}<br />09SCM에서 한 번에 관리할 수 있어요.</p><div className="hero-actions"><a className="primary-button" href={`${BASE_PATH}/apply/`}>솔루션 도입신청</a><a className="secondary-button" href="#service-intro">솔루션 살펴보기</a></div></div><HeroVisual /></div><div className="hero-fee-banner section-inner"><div><span>09SCM 솔루션 이용료</span><strong>0원</strong></div><p><b>이용료 부담 없이 공동구매를 시작하세요.</b>{' '}상품 등록부터 주문·결제·매출 관리까지 필요한 기능을 함께 제공해요.</p><a className="primary-button" href={`${BASE_PATH}/apply/`}>솔루션 도입신청</a></div></section>
 
       <section className="section" id="service-intro"><div className="section-inner"><div className="section-heading centered narrow-heading"><p className="eyebrow">SERVICE</p><h2>공동구매 운영,{' '}<br />이제 한곳에서 시작하세요</h2><p>09SCM은 본사와 가맹점이 함께 사용하는 공동구매 운영 솔루션이에요.</p></div><ServiceMap /><div className="service-benefits"><article><span>01</span><h3>본사와 가맹점이 함께</h3><p>상품과 주문 정보를 같은 흐름에서 확인해요.</p></article><article><span>02</span><h3>도매와 소매를 한곳에서</h3><p>상품 공급부터 소비자 판매까지 이어서 관리해요.</p></article><article><span>03</span><h3>우리 동네 고객과 가깝게</h3><p>가맹점별 소매몰에서 픽업·배달 주문을 받아요.</p></article></div></div></section>
 
@@ -162,7 +162,7 @@ export default function LandingPage() {
 
       <section className="section section-dark" id="journey"><div className="section-inner"><div className="section-heading journey-heading"><p className="eyebrow">ONBOARDING</p><h2>신청부터 이용까지{' '}<br />차근차근 안내해 드려요</h2><p>복잡하게 준비할 필요 없어요.{' '}<br />신청 내용을 확인한 뒤 필요한 절차를 안내해 드립니다.</p></div><div className="journey-grid">{JOURNEY.map((item) => <article key={item.step}><span>{item.step}</span><h3>{item.title}</h3><p>{item.description}</p></article>)}</div><div className="journey-action"><p>우리 가게 공동구매를 더 편하게 운영해 보세요.</p><a className="primary-button light-button" href={`${BASE_PATH}/apply/`}>솔루션 도입신청</a></div></div></section>
 
-      <section className="section" id="faq"><div className="section-inner faq-grid"><div className="section-heading"><p className="eyebrow">FAQ</p><h2>궁금한 내용을{' '}<br />확인해 보세요</h2><p>도입 전 자주 묻는 내용을 간단하게 정리했어요.</p><div className="faq-topics"><span>도입 방법</span><span>소매몰</span><span>주문</span><span>결제</span></div></div><div className="faq-list"><details><summary>09SCM은 어떤 서비스인가요?</summary><p>본사와 가맹점이 상품, 주문, 결제, 발주와 매출 정보를 함께 관리할 수 있는 공동구매 운영 솔루션이에요.</p></details><details><summary>누가 이용할 수 있나요?</summary><p>공동구매 상품을 공급하고 가맹점과 함께 운영하려는 본사를 대상으로 해요. 승인 후 본사와 가맹점이 함께 사용할 수 있습니다.</p></details><details><summary>가맹점마다 별도의 소매몰이 제공되나요?</summary><p>네. 승인이 완료되면 본사 계정과 소매몰이 생성되며, 가맹점도 각자의 소매몰에서 상품을 판매할 수 있어요.</p></details><details><summary>소비자가 별도의 앱을 설치해야 하나요?</summary><p>아니요. 전달받은 소매몰 링크에 접속해 모바일이나 PC에서 바로 상품을 확인하고 주문할 수 있어요.</p></details><details><summary>온라인 주문과 채팅주문을 함께 관리할 수 있나요?</summary><p>소매몰을 통한 링크주문과 판매자가 접수하는 채팅주문을 한곳에서 확인할 수 있어요.</p></details><details><summary>어떤 결제수단을 사용할 수 있나요?</summary><p>카드결제, 계좌이체, 현장결제를 주문 방식에 맞게 사용할 수 있어요.</p></details><details><summary>도입 신청 후에는 어떻게 진행되나요?</summary><p>신청 내용을 심사하고 결제 연동 정보를 확인한 뒤 운영승인을 진행해요. 승인이 완료되면 본사 계정과 소매몰이 생성되며 이용 방법을 안내해 드립니다.</p></details></div></div></section>
+      <section className="section" id="faq"><div className="section-inner faq-grid"><div className="section-heading"><p className="eyebrow">FAQ</p><h2>궁금한 내용을{' '}<br />확인해 보세요</h2><p>도입 전 자주 묻는 내용을 간단하게 정리했어요.</p><div className="faq-topics"><span>도입 방법</span><span>소매몰</span><span>주문</span><span>결제</span></div></div><div className="faq-list"><details><summary>09SCM은 어떤 솔루션인가요?</summary><p>본사와 가맹점이 상품, 주문, 결제, 발주와 매출 정보를 함께 관리할 수 있는 공동구매 운영 솔루션이에요.</p></details><details><summary>누가 이용할 수 있나요?</summary><p>공동구매 상품을 공급하고 가맹점과 함께 운영하려는 본사를 대상으로 해요. 승인 후 본사와 가맹점이 함께 사용할 수 있습니다.</p></details><details><summary>가맹점마다 별도의 소매몰이 제공되나요?</summary><p>네. 승인이 완료되면 본사 계정과 소매몰이 생성되며, 가맹점도 각자의 소매몰에서 상품을 판매할 수 있어요.</p></details><details><summary>소비자가 별도의 앱을 설치해야 하나요?</summary><p>아니요. 전달받은 소매몰 링크에 접속해 모바일이나 PC에서 바로 상품을 확인하고 주문할 수 있어요.</p></details><details><summary>온라인 주문과 채팅주문을 함께 관리할 수 있나요?</summary><p>소매몰을 통한 링크주문과 판매자가 접수하는 채팅주문을 한곳에서 확인할 수 있어요.</p></details><details><summary>어떤 결제수단을 사용할 수 있나요?</summary><p>카드결제, 계좌이체, 현장결제를 주문 방식에 맞게 사용할 수 있어요.</p></details><details><summary>도입 신청 후에는 어떻게 진행되나요?</summary><p>신청 내용을 심사하고 결제 연동 정보를 확인한 뒤 운영승인을 진행해요. 승인이 완료되면 본사 계정과 소매몰이 생성되며 이용 방법을 안내해 드립니다.</p></details></div></div></section>
 
       <section className="closing-cta"><div className="section-inner"><p className="eyebrow">GET STARTED</p><h2>동네에서 함께 사는 즐거움,{' '}<br />09SCM으로 시작해 보세요</h2><p>본사와 가맹점의 상품, 주문, 결제 흐름을 한곳에서 이어서 관리할 수 있어요.</p><a className="primary-button light-button" href={`${BASE_PATH}/apply/`}>솔루션 도입신청</a></div></section>
     </main><SiteFooter /></div>

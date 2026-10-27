@@ -3,7 +3,7 @@
 import { useState } from 'react';
 
 const GNB = [
-  { label: '서비스 소개', href: '#service-intro' },
+  { label: '솔루션 소개', href: '#service-intro' },
   { label: '핵심 기능', href: '#features' },
   { label: '이용 흐름', href: '#flow' },
   { label: '도입 절차', href: '#journey' },
