@@ -13,7 +13,6 @@ export default function SiteFooter() {
           <div className="footer-info-row">
             <span>상호명 : (주)0SCM</span>
             <span>대표자 : 홍길동</span>
-            <span>개인정보관리책임자 : 홍길동</span>
             <span>사업자등록번호 : 123-12-12345</span>
             <span>주소 : 서울특별시 구로구 디지털로26길 61, 12층 1202호 (구로동, 에이스하이엔드타워2차)</span>
             <span className="footer-email"><span>이메일 :</span><a href="mailto:support@0scm.com">support@0scm.com</a></span>
