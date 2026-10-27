@@ -1,8 +1,10 @@
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 export default function SiteFooter() {
   return (
     <footer className="site-footer">
       <div className="footer-inner">
-        <a className="footer-brand" href="/" aria-label="09SCM 홈페이지">
+        <a className="footer-brand" href={`${BASE_PATH}/`} aria-label="09SCM 홈페이지">
           <strong>09SCM</strong>
             <span>동네에서 함께 사는 즐거움</span>
         </a>
@@ -20,8 +22,8 @@ export default function SiteFooter() {
 
         <div className="footer-bottom">
           <nav className="footer-policies" aria-label="정책 안내">
-            <a href="/terms">이용약관</a>
-            <a className="privacy-link" href="/privacy">개인정보처리방침</a>
+            <a href={`${BASE_PATH}/terms/`}>이용약관</a>
+            <a className="privacy-link" href={`${BASE_PATH}/privacy/`}>개인정보처리방침</a>
           </nav>
           <p>Copyright © 0SCM. All rights reserved.</p>
         </div>

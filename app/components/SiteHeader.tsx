@@ -11,6 +11,7 @@ const GNB = [
 ];
 
 const LOGIN_URL = 'https://09scm.github.io/09SCM/mock/partner.html';
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 
 type SiteHeaderProps = {
   isHome?: boolean;
@@ -19,24 +20,26 @@ type SiteHeaderProps = {
 
 export default function SiteHeader({ isHome = false, showApply = true }: SiteHeaderProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const prefix = isHome ? '' : '/';
+  const prefix = isHome ? '' : `${BASE_PATH}/`;
+  const homeHref = isHome ? '#top' : `${BASE_PATH}/`;
+  const applyHref = `${BASE_PATH}/apply/`;
 
   return (
     <header className="site-header">
-      <a className="brand" href={isHome ? '#top' : '/'} aria-label="09SCM 홈">09SCM</a>
+      <a className="brand" href={homeHref} aria-label="09SCM 홈">09SCM</a>
 
       <nav className={'gnb ' + (mobileOpen ? 'is-open' : '')} aria-label="주요 메뉴">
         {GNB.map((item) => (
           <a key={item.href} href={prefix + item.href} onClick={() => setMobileOpen(false)}>{item.label}</a>
         ))}
         {showApply && (
-          <a className="mobile-apply" href="/apply" onClick={() => setMobileOpen(false)}>솔루션 도입신청</a>
+          <a className="mobile-apply" href={applyHref} onClick={() => setMobileOpen(false)}>솔루션 도입신청</a>
         )}
       </nav>
 
       <div className="header-actions">
         <a className="login-button" href={LOGIN_URL}>09SCM 로그인</a>
-        {showApply && <a className="primary-button header-cta" href="/apply">솔루션 도입신청</a>}
+        {showApply && <a className="primary-button header-cta" href={applyHref}>솔루션 도입신청</a>}
       </div>
 
       <button

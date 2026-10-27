@@ -2,6 +2,8 @@ import SiteFooter from './components/SiteFooter';
 import SiteHeader from './components/SiteHeader';
 import LandingPage from './components/LandingPage';
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 const FEATURES = [
   { number: '01', title: '소매상품·주문 관리', description: '상품 진열부터 소비자 주문과 수령 처리까지 소매 운영 흐름을 관리합니다.' },
   { number: '02', title: '도매상품·발주 관리', description: '본사와 가맹점이 도매상품을 공급하고 발주·수령 내역을 확인합니다.' },
@@ -33,7 +35,7 @@ function LegacyHome() {
               본사와 가맹점의 공동구매 운영 업무를 연결합니다.
             </p>
             <div className="hero-actions">
-              <a className="primary-button" href="/apply">솔루션 도입신청</a>
+              <a className="primary-button" href={`${BASE_PATH}/apply/`}>솔루션 도입신청</a>
               <a className="secondary-button" href="#features">핵심 기능 보기</a>
             </div>
             <div className="value-strip" aria-label="서비스 주요 가치">
@@ -151,7 +153,7 @@ function LegacyHome() {
             <p className="eyebrow">GET STARTED</p>
             <h2>09SCM으로 공동구매 운영을 시작하세요</h2>
             <p>신청서를 접수하면 담당자가 심사와 PayApp 연동 확인을 진행하고, 운영승인 후 계정 이용을 안내합니다.</p>
-            <a className="primary-button light-button" href="/apply">솔루션 도입신청</a>
+            <a className="primary-button light-button" href={`${BASE_PATH}/apply/`}>솔루션 도입신청</a>
           </div>
         </section>
       </main>

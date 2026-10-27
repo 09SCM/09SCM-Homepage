@@ -4,6 +4,8 @@ import { FormEvent, useMemo, useState } from 'react';
 import SiteFooter from '../components/SiteFooter';
 import SiteHeader from '../components/SiteHeader';
 
+const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+
 type Agreement = 'service' | 'privacy' | 'marketing';
 type MockFeedback = { type: 'success' | 'error'; message: string } | null;
 
@@ -237,7 +239,7 @@ export default function ApplicationPage() {
           </section>
 
           <div className="application-actions">
-            <a className="secondary-button" href="/">메인으로</a>
+            <a className="secondary-button" href={`${BASE_PATH}/`}>메인으로</a>
             <button className="primary-button" type="submit">솔루션 도입신청</button>
           </div>
         </form>
@@ -265,7 +267,7 @@ export default function ApplicationPage() {
               <p className="eyebrow">COMPLETE</p>
               <h2 id="completion-title">솔루션 도입신청이 접수되었습니다</h2>
               <p>신청 내용을 심사한 후 본사 계정 발급 절차를 안내해드립니다.</p>
-              <div className="completion-actions"><a className="secondary-button" href="/">메인으로</a><a className="primary-button" href="/#service-intro">09SCM 솔루션 소개</a></div>
+              <div className="completion-actions"><a className="secondary-button" href={`${BASE_PATH}/`}>메인으로</a><a className="primary-button" href={`${BASE_PATH}/#service-intro`}>09SCM 솔루션 소개</a></div>
             </div>
           </section>
         </div>
