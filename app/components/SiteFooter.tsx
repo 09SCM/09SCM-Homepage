@@ -11,11 +11,11 @@ export default function SiteFooter() {
 
         <div className="footer-company-info">
           <div className="footer-info-row">
-            <span>상호명 : (주)0SCM</span>
-            <span>대표자 : 홍길동</span>
-            <span>사업자등록번호 : 123-12-12345</span>
-            <span>주소 : 서울특별시 구로구 디지털로26길 61, 12층 1202호 (구로동, 에이스하이엔드타워2차)</span>
-            <span className="footer-email"><span>이메일 :</span><a href="mailto:support@0scm.com">support@0scm.com</a></span>
+            <span>상호명 : (주)유디아이디</span>
+            <span>대표자 : 정재훈</span>
+            <span>사업자등록번호 : 113-86-56537</span>
+            <span>통신판매업 신고번호 : 제 2012-서울구로-0239호</span>
+            <span>사업장 주소 : [08389] 서울특별시 구로구 디지털로26길 61, 12층 1202, 1203호 (구로동, 에이스하이엔드타워 II)</span>
           </div>
         </div>
 
@@ -24,7 +24,7 @@ export default function SiteFooter() {
             <a href={`${BASE_PATH}/terms/`}>이용약관</a>
             <a className="privacy-link" href={`${BASE_PATH}/privacy/`}>개인정보처리방침</a>
           </nav>
-          <p>Copyright © 0SCM. All rights reserved.</p>
+          <p>Copyright © UDID Inc. All rights reserved.</p>
         </div>
       </div>
     </footer>
